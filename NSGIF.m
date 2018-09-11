@@ -11,7 +11,7 @@
 
 // Declare constants
 #define fileName     @"NSGIF"
-#define timeInterval @(100)
+#define timeInterval @(10)
 #define tolerance    @(0.01)
 
 typedef NS_ENUM(NSInteger, GIFSize) {

@@ -16,8 +16,8 @@ typedef void (^VideoCompletionBlock)(void);
 
 @interface ASScreenRecorder : NSObject<AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 {
-    AVAudioRecorder *recorder;
-    
+  AVAudioRecorder *recorder;
+  
 }
 
 @property (nonatomic, readonly) BOOL isRecording;
@@ -42,6 +42,7 @@ typedef void (^VideoCompletionBlock)(void);
 @property(nonatomic,retain)AVURLAsset* videoAsset;
 @property(nonatomic,retain)AVURLAsset* audioAsset;
 + (instancetype)sharedInstance;
++ (instancetype)newInstance;
 - (BOOL)startRecording;
 - (void)stopRecordingWithCompletion:(VideoCompletionBlock)completionBlock;
 @end
